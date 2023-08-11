@@ -1,0 +1,464 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+header{
+  padding: 3.6rem 4.8rem;
+  background-color: #fdf2e9;
+}
+
+section{
+  display: block;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo{
+  height: 2.2rem;
+}
+
+.nav-list{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.list-item{
+  margin: 0 2.4rem;
+}
+
+
+.list-item:last-child{
+  margin-right: 0;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.nav-btn{
+  padding: 1rem 2.4rem;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+
+/* =================== SECTION HERO =================*/
+
+
+.sect-hero{
+  background-color: #fdf2e9;
+  padding: 5rem 0 9.6rem 0;
+}
+
+.sect-hero-content{
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+}
+
+.sect-hero-content .box-1 {
+  align-self: center;
+}
+
+.sect-hero-content .box-1 .box-1-1 h1{
+  font-size: 5.2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+}
+
+.sect-hero-content .box-1 .box-1-1 p{
+  font-size: 2rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 4.8rem;
+  line-height: 1.6;
+}
+
+.sect-hero-content .box-1 .box-1-1 .btn{
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 1.4rem 2.8rem;
+  display: inline-block;
+}
+
+
+.sect-hero-content .box-1 .box-1-1 .btn-learn{
+  background-color: #fff;
+  color: #333;
+  margin-left: 1.6rem;
+}
+
+.sect-hero-content .box-1 .box-1-1 .btn-learn:hover{
+  background-color: transparent;
+  box-shadow: 0 0 0 3px #fff inset;
+}
+
+.nav-btn, 
+.sect-hero-content .box-1 .box-1-1 .btn{
+  transition: background-color .3s linear;
+}
+
+.nav-btn:hover, 
+.sect-hero-content .box-1 .box-1-1 .btn-start:hover{
+  background-color: #cf711f;
+}
+
+.nav-btn:visited, 
+.sect-hero-content .box-1 .box-1-1 .btn:visited{
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(230,126,34,0.6); 
+  box-shadow: 0px 0px 0px 3px rgba(230,126,34,0.6);
+}
+
+.box-1-2{
+  margin-top: 7.2rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.box-1-2 .faces{
+  display: flex;
+}
+
+
+.box-1-2 .faces .face{
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-right: -1.2rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+
+.box-1-2 .faces .face:last-child{
+  margin: 0;
+}
+
+
+.box-1-2 .text-r{
+  font-size: 1.8rem;
+  color: #555;
+  font-weight: 500;
+  margin-left: 1.2rem;
+}
+
+.box-1-2 .text-r span{
+  color: #cf711f;
+  font-weight: 700;
+}
+
+.box-2{
+  display: flex;
+  align-items: center;
+}
+
+.box-2 img{
+  width: 100%;
+}
+
+.sect-logo .container{
+  max-width: 120rem;
+  margin: auto;
+  padding: 2rem 0 3rem 0;
+}
+.sect-logo .container .box-logo{
+  display: flex;
+}
+.sect-logo .container .box-logo img{
+  height: 3.2rem;
+  margin: auto;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+.sect-logo .container .text-t{
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 0.1rem;
+}
+
+
+/* =================== SECTION HWIW =================*/
+
+
+.sect-hwiw{
+  padding: 11rem 0 ;
+}
+
+.sect-hwiw .container{
+  max-width: 120rem;
+  margin: auto;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+
+.sect-hwiw .container .hwiw{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+.sect-hwiw .container .top-t{
+  font-size: 4.2rem;
+  color: #333;
+  margin-bottom: 9rem;
+}
+
+.sect-hwiw .grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  row-gap: 10rem;
+}
+
+
+.sect-hwiw .grid-container .grid-item{
+  align-self: center;
+}
+
+.sect-hwiw .grid-container .grid-item .number{
+  font-weight: 700;
+  font-size: 8.6rem;
+  letter-spacing: 0.1rem;
+  color: #c6c6c699;
+  margin-bottom: 0.8rem;
+}
+
+.sect-hwiw .grid-container .grid-item .tit{
+  color: #333;
+  font-size: 2.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.sect-hwiw .grid-container .grid-item .cont{
+  color: #555;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+}
+
+.sect-hwiw .grid-container .grid-item-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sect-hwiw .grid-container .grid-item-img img{
+  width: 40%;
+}
+
+.sect-hwiw .grid-container .grid-item-img::before{
+  content: "";
+  background-color: #fcf3eb;
+  width: 60%;
+  padding-bottom: 60%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.sect-hwiw .grid-container .grid-item-img::after{
+  content: "";
+  width: 45%;
+  padding-bottom: 45%;
+  border-radius: 50%;
+  background-color: #fae5d3;
+  position: absolute;
+  z-index: -1;
+}
+
+
+/* =================== SECTION MEALS =================*/
+
+
+.sect-meals{
+  padding: 11rem 0;
+}
+
+.sect-meals .container{
+  max-width: 120rem;
+  margin: auto;
+}
+
+
+.sect-meals .container .meals-t{
+  text-transform: uppercase;
+  color: #cf711f;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.sect-meals .container .tit{
+  color: #333;
+  letter-spacing: 0.1rem;
+  font-size: 4.4rem;
+  text-align: center;
+  margin-bottom: 9.6rem;
+}
+
+
+.sect-meals .container .grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6.4rem;
+}
+
+
+.sect-meals .container .grid-item{
+  overflow: hidden;
+  border-radius: 1.2rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: transform .3s ease;
+}
+
+.sect-meals .container .grid-item:hover{
+  transform: translateY(-2rem);
+}
+
+.sect-meals .container .grid-item .item img{
+  width: 100%;
+}
+
+.sect-meals .container .grid-item .content{
+  padding: 3.6rem 5.2rem;
+}
+
+.meals-tag{
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.meals-tag span{
+  margin-right: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 50px;
+} 
+
+.bg-51cf66{
+  background-color: #51cf66;
+}
+
+.bg-94d82d{
+  background-color: #94d82d;
+}
+
+.bg-ffd43b{
+  background-color: #ffd43b;
+}
+
+
+.meals-name{
+  letter-spacing: 0.1rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3.6rem;
+}
+
+.meals-attr{
+  list-style: none;
+}
+
+.meals-attr-item{
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.meals-attr-item i{
+  font-size: 3rem;
+  color: #e67e22;
+  margin-right: 1.8rem;
+}
+
+.meals-attr-item p{
+  color: #555;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.grid-item-wwad h3{
+  font-size: 3rem;
+  margin-bottom: 3.6rem;
+}
+
+.wwad-list{
+  list-style: none;
+}
+
+.wwad-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  color: #555;
+}
+
+.wwad-item svg{
+  stroke: #e67e22;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.8rem;
+}
+
+.see-all-recipes{
+  margin-top: 7.2rem;
+  text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.see-all-recipes-link{
+  /* margin: 0 auto; */
+  color: #e67e22;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+footer{
+  font-size: 2rem;
+  font-style: italic;
+}
