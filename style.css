@@ -98,21 +98,29 @@ div{
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 9.6rem;
+  column-gap: 9.6rem;
+  row-gap: 0;
 }
 
-.sect-hero-content .box-1 {
+.sect-hero-content .box-3{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   align-self: center;
 }
 
-.sect-hero-content .box-1 .box-1-1 h1{
+.sect-hero-content .box-3 h1{
   font-size: 5.2rem;
   color: #333;
   font-weight: 700;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.4rem;
   letter-spacing: -0.1rem;
   word-spacing: 0.3rem;
   line-height: 1;
+}
+
+.sect-hero-content .box-1 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .sect-hero-content .box-1 .box-1-1 p{
@@ -202,6 +210,8 @@ div{
 .sect-hero .box-2{
   display: flex;
   align-items: center;
+  grid-column: -1 / -2;
+  grid-row: span 2;
 }
 
 .sect-hero .box-2 img{
@@ -720,7 +730,6 @@ div{
 
 
 .sect-pricing .grid-bot-item ion-icon{
-  display: block;
   width: 3.2rem;
   height: 3.2rem;
   background-color: #fdf2e9;
@@ -824,7 +833,7 @@ div{
 
 .sect-tff .regis-to-try button{
   width: 100%;
-  padding: 1.4rem;
+  padding: 1.2rem;
   background-color: rgb(69, 38, 10);
   letter-spacing: 0.1rem;
   color: #fff;
@@ -938,10 +947,4 @@ tt{
   font-size: 2rem;
   color: #555;
   font-style: italic;
-}
-
-@media (max-width: 128rem) {
-  html{
-    font-size: 54%;
-  }
 }
