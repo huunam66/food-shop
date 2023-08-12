@@ -263,11 +263,17 @@
   html{
     font-size: 52%;
   }
-
+  .sect-tff .grid-box-item-in {
+    padding: 4.8rem;
+  }
 }
 
 @media (max-width: 28.125em){
   html{
     font-size: 44%;
+  }
+
+  .sect-tff .grid-box-item-in {
+    padding: 3.2rem;
   }
 }
