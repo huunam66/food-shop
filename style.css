@@ -4,6 +4,11 @@
   font-family: "Rubik", sans-serif;
 }
 
+*:focus{
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 a{
   text-decoration: none;
 }
@@ -13,12 +18,17 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 header{
-  padding: 3.6rem 4.8rem;
+  padding: 1.6rem 6.4rem;
   background-color: #fdf2e9;
 }
 
-section{
+section,
+div{
   display: block;
 }
 
@@ -29,16 +39,18 @@ section{
 }
 
 .navbar .logo{
-  height: 2.2rem;
+  width: 6.4rem;
+  border-radius: 1.2rem;
 }
 
 .nav-list{
   display: flex;
   list-style: none;
-  align-items: center;
 }
 
 .list-item{
+  display: flex;
+  align-items: center;
   margin: 0 2.4rem;
 }
 
@@ -51,19 +63,28 @@ section{
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 2rem;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+  color: #e67e22;
+}
+
+.nav-link:hover{
+  transition: all .3s;
 }
 
 .nav-btn{
-  padding: 1rem 2.4rem;
+  text-decoration: none !important;
+  padding: 1.2rem 2.4rem;
   border-radius: 1rem;
-  color: #fff;
+  color: #fff !important;
   background-color: #e67e22;
 }
 
 
 /* =================== SECTION HERO =================*/
-
 
 .sect-hero{
   background-color: #fdf2e9;
@@ -90,6 +111,7 @@ section{
   font-weight: 700;
   margin-bottom: 3.2rem;
   letter-spacing: -0.1rem;
+  word-spacing: 0.3rem;
   line-height: 1;
 }
 
@@ -107,7 +129,7 @@ section{
   font-weight: 700;
   background-color: #e67e22;
   color: #fff;
-  padding: 1.4rem 2.8rem;
+  padding: 1.2rem 2.4rem;
   display: inline-block;
 }
 
@@ -120,12 +142,12 @@ section{
 
 .sect-hero-content .box-1 .box-1-1 .btn-learn:hover{
   background-color: transparent;
-  box-shadow: 0 0 0 3px #fff inset;
+  box-shadow: 0 0 0 0.3rem #fff inset;
 }
 
 .nav-btn, 
 .sect-hero-content .box-1 .box-1-1 .btn{
-  transition: background-color .3s linear;
+  transition: background-color .3s;
 }
 
 .nav-btn:hover, 
@@ -135,61 +157,61 @@ section{
 
 .nav-btn:visited, 
 .sect-hero-content .box-1 .box-1-1 .btn:visited{
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(230,126,34,0.6); 
-  box-shadow: 0px 0px 0px 3px rgba(230,126,34,0.6);
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(230,126,34,0.6); 
+  box-shadow: 0 0 0 0.3rem rgba(230,126,34,0.6);
 }
 
-.box-1-2{
-  margin-top: 7.2rem;
+.sect-hero .box-1-2{
+  margin-top: 6.4rem;
   display: flex;
   align-items: center;
 }
 
 
-.box-1-2 .faces{
+.sect-hero .box-1-2 .faces{
   display: flex;
 }
 
 
-.box-1-2 .faces .face{
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: -1.2rem;
+.sect-hero .box-1-2 .faces .face{
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: -1.8rem;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 0.3rem solid #fff;
 }
 
 
-.box-1-2 .faces .face:last-child{
+.sect-hero .box-1-2 .faces .face:last-child{
   margin: 0;
 }
 
 
-.box-1-2 .text-r{
+.sect-hero .box-1-2 .text-r{
   font-size: 1.8rem;
   color: #555;
   font-weight: 500;
   margin-left: 1.2rem;
 }
 
-.box-1-2 .text-r span{
+.sect-hero .box-1-2 .text-r span{
   color: #cf711f;
   font-weight: 700;
 }
 
-.box-2{
+.sect-hero .box-2{
   display: flex;
   align-items: center;
 }
 
-.box-2 img{
+.sect-hero .box-2 img{
   width: 100%;
 }
 
 .sect-logo .container{
   max-width: 120rem;
   margin: auto;
-  padding: 2rem 0 3rem 0;
+  padding: 2rem 0 4rem 0;
 }
 .sect-logo .container .box-logo{
   display: flex;
@@ -213,15 +235,14 @@ section{
 
 /* =================== SECTION HWIW =================*/
 
-
 .sect-hwiw{
-  padding: 11rem 0 ;
+  padding: 9.6rem 0 ;
 }
 
 .sect-hwiw .container{
   max-width: 120rem;
   margin: auto;
-  padding: 3rem;
+  padding: 3.2rem;
   box-sizing: border-box;
 }
 
@@ -230,21 +251,21 @@ section{
   font-size: 1.6rem;
   font-weight: 500;
   color: #cf711f;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
   text-transform: uppercase;
 }
 
 .sect-hwiw .container .top-t{
-  font-size: 4.2rem;
+  font-size: 4.4rem;
   color: #333;
-  margin-bottom: 9rem;
+  margin-bottom: 9.6rem;
 }
 
 .sect-hwiw .grid-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-  row-gap: 10rem;
+  gap: 4.8rem;
+  row-gap: 9.6rem;
 }
 
 
@@ -255,14 +276,15 @@ section{
 .sect-hwiw .grid-container .grid-item .number{
   font-weight: 700;
   font-size: 8.6rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: -0.1rem;
+  word-spacing: 0.3rem;
   color: #c6c6c699;
-  margin-bottom: 0.8rem;
+  margin-bottom: 2.4rem;
 }
 
 .sect-hwiw .grid-container .grid-item .tit{
   color: #333;
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 3.2rem;
 }
 
@@ -307,9 +329,8 @@ section{
 
 /* =================== SECTION MEALS =================*/
 
-
 .sect-meals{
-  padding: 11rem 0;
+  padding: 9.6rem 3.6rem;
 }
 
 .sect-meals .container{
@@ -330,7 +351,8 @@ section{
 
 .sect-meals .container .tit{
   color: #333;
-  letter-spacing: 0.1rem;
+  letter-spacing: -0.1rem;
+  word-spacing: 0.3rem;
   font-size: 4.4rem;
   text-align: center;
   margin-bottom: 9.6rem;
@@ -348,11 +370,11 @@ section{
   overflow: hidden;
   border-radius: 1.2rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  transition: transform .3s ease;
+  transition: transform .4s;
 }
 
 .sect-meals .container .grid-item:hover{
-  transform: translateY(-2rem);
+  transform: translateY(-1.6rem);
 }
 
 .sect-meals .container .grid-item .item img{
@@ -456,9 +478,470 @@ section{
   color: #e67e22;
   font-size: 2rem;
   text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid currentColor;
+  transition: all .3s;
 }
 
-footer{
+.see-all-recipes-link:hover{
+  border: none;
+}
+
+
+/* =================== SECTION TESTIMONIALS =================*/
+
+.sect-testimonials{
+  background-color: #fdf2e9;
+  padding: 9.6rem 3.6rem;
+}
+
+.sect-testimonials .container{
+  max-width: 130rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+}
+
+.sect-testimonials .box-1 .top-t{
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #cf711f;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.sect-testimonials .box-1 .tit{
+  font-size: 4.4rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  word-spacing: 0.3rem;
+  margin-bottom: 9.6rem;
+}
+
+.sect-testimonials .grid-box-1{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+}
+
+.sect-testimonials .grid-box-1 .grid-item .avt{
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.sect-testimonials .grid-box-1 .grid-item .t-1{
   font-size: 2rem;
+  color: #555;
+  line-height: 3.6rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+.sect-testimonials .grid-box-1 .grid-item .by{
+  font-size: 1.8rem;
+  color: #666;
+  letter-spacing: 0.1rem;
+}
+
+
+.sect-testimonials .box-2{
+  align-self: center;
+}
+
+.sect-testimonials .grid-box-2{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.sect-testimonials .grid-box-2 .cont-pic{
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+
+.sect-testimonials .grid-box-2 .cont-pic img{
+  width: 100%;
+  transition: transform .8s;
+}
+
+.sect-testimonials .grid-box-2 .cont-pic img:hover{
+  transform: scale(1.2);
+}
+
+
+/* =================== SECTION PRICING =================*/
+
+.sect-pricing{
+  padding: 9.6rem 3.6rem;
+}
+
+.sect-pricing .container{
+  margin: auto;
+  max-width: 120rem;
+}
+
+
+.sect-pricing .container .top-t{
+  text-transform: uppercase;
+  color: #cf711f;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+.sect-pricing .container .tit{
+  color: #333;
+  margin-bottom: 9.6rem;
+  font-size: 5.2rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  word-spacing: 0.3rem;
+}
+
+.sect-pricing .cont-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+}
+
+
+.sect-pricing .cont-grid-item{
+  width: 75%;
+  padding: 5.2rem;
+  box-sizing: border-box;
+  border: 0.2rem solid #fdf2e9;
+  border-radius: 1.2rem;
+}
+
+.sect-pricing .cont-grid-item:first-child{
+  justify-self: end;
+}
+
+.bg-fdf2e9{
+  background-color: #fdf2e9;
+}
+
+.sect-pricing .cont-grid-item p:first-child{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #cf711f;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+}
+
+.sect-pricing .cont-grid-item p:nth-child(2){
+  color: #333;
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+.sect-pricing .cont-grid-item p:nth-child(2) strong{
+  font-size: 6.2rem;
+}
+
+
+.sect-pricing .cont-grid-item p:nth-child(3){
+  color: #555;
+  font-size: 1.8rem;
+  margin-bottom: 6.4rem;
+  text-align: center;
+}
+
+
+.sect-pricing .cont-grid-item ul{
+  list-style: none;
+}
+
+
+.sect-pricing .cont-grid-item ul li{
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.sect-pricing .cont-grid-item ul li svg{
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 2rem;
+  stroke: #e67e22;
+}
+
+
+.sect-pricing .cont-grid-item .start-eating-well{
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.sect-pricing .cont-grid-item .start-eating-well a{
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #e67e22;
+  padding: 1.6rem 3.2rem;
+  border-radius: 1.2rem;
+  margin: auto;
+  transition: background-color .3s;
+}
+
+
+.sect-pricing .cont-grid-item .start-eating-well a:hover{
+  background-color: #cf711f;
+}
+
+.sect-pricing .bot-t{
+  color: #555;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 6.4rem;
+}
+
+.sect-pricing .grid-bot{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4.8rem;
+  margin-top: 12.8rem;
+}
+
+
+.sect-pricing .grid-bot-item ion-icon{
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #fdf2e9;
+  color: #e67e22;
+  padding: 2rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+.sect-pricing .grid-bot-item strong{
+  display: block;
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.sect-pricing .grid-bot-item p{
+  font-size: 2rem;
+  color: #555;
+  line-height: 2;
+  letter-spacing: 0.1rem;
+}
+
+
+/* =================== SECTION TRY FOR FREE =================*/
+
+.sect-tff{
+  padding: 12.8rem 3.6rem;
+}
+
+.sect-tff .container{
+  margin: auto;
+  max-width: 120rem;
+  background-color: #e98b38;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.sect-tff .grid-box{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+}
+
+
+.sect-tff .grid-box-item{
+  grid-column: 1 / -2;
+}
+
+.sect-tff .grid-box-item-in{
+  padding: 6.4rem;
+}
+
+
+.sect-tff .grid-box-item-in h1{
+  font-size: 4.4rem;
+  letter-spacing: -0.1rem;
+  word-spacing: 0.3rem;
+  color: #45260a;
+  margin-bottom: 2.4rem;
+}
+
+.sect-tff .grid-box-item-in p{
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: #45260a;
+  line-height: 2;
+  margin-bottom: 4.4rem;
+}
+
+.sect-tff .regis-to-try{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+} 
+
+
+.sect-tff .regis-to-try .f-item label{
+  color: #45260a;
+  margin-bottom: 1.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  display: block; 
+}
+
+.sect-tff .regis-to-try .f-item input,
+.sect-tff .regis-to-try .f-item select{
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #45260a;
+  background-color: #fdf2e9;
+  border-radius: 1rem;
+  border: none;
+  letter-spacing: 0.1rem;
+}
+
+
+.sect-tff .regis-to-try button{
+  width: 100%;
+  padding: 1.4rem;
+  background-color: rgb(69, 38, 10);
+  letter-spacing: 0.1rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  align-self: end;
+  transition: all .3s;
+}
+
+.sect-tff .regis-to-try button:hover{
+  background-color: #fdf2e9;
+  color: #45260a;
+}
+
+
+.sect-tff .grid-box-item-bgimg{
+  grid-column: -2 / -1;
+  background-image: linear-gradient(to right bottom, rgba(235, 152, 78, 0.3), rgba(230, 126, 34, 0.4)),
+                    url("./img/eating.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+footer{
+  padding: 12.8rem;
+  border-top: 0.1rem solid #eee;
+  -webkit-box-shadow: 0px -4px 11px -11px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px -4px 11px -11px rgba(66, 68, 90, 1);
+box-shadow: 0px -4px 11px -11px rgba(66, 68, 90, 1);
+}
+
+footer .container{
+  max-width: 120rem;
+  margin: auto;
+}
+
+.grid-f{
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  gap: 4.4rem;
+}
+
+.grid-f-item{
+  align-self: start;
+  justify-self: center;
+}
+
+.grid-f-item .t-1 .logo{
+  width: 8rem;
+  border-radius: 1.2rem;
+}
+
+.grid-f-item .t-1 .social-ic{
+  display: flex;
+  margin: 2.4rem 0 3.2rem 0;
+}
+
+.grid-f-item .t-1 .social-ic ion-icon{
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 2rem;
+  color: #888;
+}
+
+
+.grid-f-item .t-1 .by{
+  font-size: 1.8rem !important;
+  color: #777 !important;
   font-style: italic;
+}
+
+
+.grid-f-item .grid-f-item-in .st-t{
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 4.4rem;
+  font-weight: 500;
+}
+
+.grid-f-item .grid-f-item-in ul{
+  list-style: none;
+}
+
+.grid-f-item .grid-f-item-in ul li{
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.grid-f-item .grid-f-item-in ul li a{
+  color: #777;
+  transition: all .3s;
+}
+
+
+.grid-f-item .grid-f-item-in ul li a:hover{
+  color: #e67e22;
+}
+
+
+tt{
+  font-size: 2rem;
+  color: #555;
+  font-style: italic;
+}
+
+@media (max-width: 128rem) {
+  html{
+    font-size: 54%;
+  }
 }
