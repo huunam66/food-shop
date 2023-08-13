@@ -59,6 +59,16 @@
   }
 }
 
+@media (max-width: 62.5em){
+  .sect-tff .grid-box{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sect-tff .regis-to-try{
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 56.25em){
   .sect-meals .container .grid-container{
     grid-template-columns: repeat(2, 1fr);
@@ -275,5 +285,11 @@
 
   .sect-tff .grid-box-item-in {
     padding: 3.2rem;
+  }
+}
+
+@media (max-width: 21.875em) {
+  html{
+    font-size: 36%;
   }
 }
