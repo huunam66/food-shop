@@ -25,6 +25,7 @@ const e_menu_nav_click = (btn) => {
   if (navlist.classList.contains("nav-cls")) {
     navlist.classList.remove("nav-cls");
     navlist.classList.add("nav-opn");
+    navlist.classList.remove("d-none");
     child_Nodes[0].className = "ic-op-nav-icc-bf";
     child_Nodes[1].className = "ic-op-nav-icc-dv";
     child_Nodes[2].className = "ic-op-nav-icc-af";
@@ -35,6 +36,9 @@ const e_menu_nav_click = (btn) => {
       child_Nodes[0].className = "ic-op-nav-ini-bf";
       child_Nodes[1].className = "ic-op-nav-ini-dv";
       child_Nodes[2].className = "ic-op-nav-ini-af";
+      setTimeout(() => {
+        navlist.classList.add("d-none");
+      }, 600);
     }
   }
 };
@@ -66,11 +70,16 @@ const ar_btn_menu = () => {
     navbar.removeChild(navlist);
     body.appendChild(nav_out);
     navlist = nav_out;
+    setTimeout(() => {
+      !navlist.classList.contains("d-none")
+        ? navlist.classList.add("d-none")
+        : null;
+    }, 600);
   }
 
-  if (wd_bd > 900 && exs_btn_opnav) {
+  if (wd_bd > 900) {
     navbar.classList.remove("nav-fx-op");
-    navbar.removeChild(exs_btn_opnav);
+    exs_btn_opnav ? navbar.removeChild(exs_btn_opnav) : null;
     navlist.classList.contains("nav-cls")
       ? navlist.classList.remove("nav-cls")
       : navlist.classList.contains("nav-opn")
@@ -78,9 +87,14 @@ const ar_btn_menu = () => {
       : null;
     body.classList.remove("mb");
     let nav_in = navlist;
-    body.removeChild(navlist);
+    try {
+      body.removeChild(navlist);
+    } catch (err) {}
     navbar.appendChild(nav_in);
     navlist = nav_in;
+    navlist.classList.contains("d-none")
+      ? navlist.classList.remove("d-none")
+      : null;
   }
 };
 

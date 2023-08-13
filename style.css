@@ -105,6 +105,10 @@ div{
   -webkit-backdrop-filter: blur(1.6rem);
 }
 
+.d-none{
+  display: none;
+}
+
 .h-100{
   height: 100vh;
 }
