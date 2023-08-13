@@ -40,52 +40,54 @@ const e_menu_nav_click = (btn) => {
 };
 
 const ar_btn_menu = () => {
-  let wd_bd = body.getBoundingClientRect().width;
-  let exs_btn_opnav = navbar.querySelector(".ic-menu-nav");
-  if (wd_bd <= 900 && !exs_btn_opnav) {
-    const btn_menu = document.createElement("button");
-    btn_menu.classList.add("ic-menu-nav");
-    const div1 = document.createElement("div");
-    const div2 = document.createElement("div");
-    const div3 = document.createElement("div");
-    div1.classList.add("ic-op-nav-ini-bf");
-    div2.classList.add("ic-op-nav-ini-dv");
-    div3.classList.add("ic-op-nav-ini-af");
+  const inv = new IntersectionObserver((e) => {
+    let wd_bd = e[0].boundingClientRect.width;
+    let exs_btn_opnav = navbar.querySelector(".ic-menu-nav");
+    if (wd_bd <= 900 && !exs_btn_opnav) {
+      const btn_menu = document.createElement("button");
+      btn_menu.classList.add("ic-menu-nav");
+      const div1 = document.createElement("div");
+      const div2 = document.createElement("div");
+      const div3 = document.createElement("div");
+      div1.classList.add("ic-op-nav-ini-bf");
+      div2.classList.add("ic-op-nav-ini-dv");
+      div3.classList.add("ic-op-nav-ini-af");
 
-    btn_menu.appendChild(div1);
-    btn_menu.appendChild(div2);
-    btn_menu.appendChild(div3);
-    navbar.appendChild(btn_menu);
-    navbar.classList.add("nav-fx-op");
-    navlist.classList.add("nav-cls");
-    btn_menu.addEventListener("click", () => {
-      e_menu_nav_click(btn_menu);
-    });
-    body.classList.add("mb");
-    let nav_out = navlist;
-    navbar.removeChild(navlist);
-    body.appendChild(nav_out);
-    navlist = nav_out;
-  }
+      btn_menu.appendChild(div1);
+      btn_menu.appendChild(div2);
+      btn_menu.appendChild(div3);
+      navbar.appendChild(btn_menu);
+      navbar.classList.add("nav-fx-op");
+      navlist.classList.add("nav-cls");
+      btn_menu.addEventListener("click", () => {
+        e_menu_nav_click(btn_menu);
+      });
+      body.classList.add("mb");
+      let nav_out = navlist;
+      navbar.removeChild(navlist);
+      body.appendChild(nav_out);
+      navlist = nav_out;
+    }
 
-  if (wd_bd > 900) {
-    navbar.classList.remove("nav-fx-op");
-    try {
-      navbar.removeChild(exs_btn_opnav);
-    } catch (ex) {}
-    navlist.classList.contains("nav-cls")
-      ? navlist.classList.remove("nav-cls")
-      : navlist.classList.contains("nav-opn")
-      ? navlist.classList.remove("nav-opn")
-      : null;
-    body.classList.remove("mb");
-    let nav_in = navlist;
-    try {
-      body.removeChild(navlist);
-    } catch (ex) {}
-    navbar.appendChild(nav_in);
-    navlist = nav_in;
-  }
+    if (wd_bd > 900) {
+      navbar.classList.remove("nav-fx-op");
+      try {
+        navbar.removeChild(exs_btn_opnav);
+      } catch (ex) {}
+      navlist.classList.contains("nav-cls")
+        ? navlist.classList.remove("nav-cls")
+        : navlist.classList.contains("nav-opn")
+        ? navlist.classList.remove("nav-opn")
+        : null;
+      body.classList.remove("mb");
+      let nav_in = navlist;
+      try {
+        body.removeChild(navlist);
+      } catch (ex) {}
+      navbar.appendChild(nav_in);
+      navlist = nav_in;
+    }
+  }).observe(body);
 };
 
 window.addEventListener("resize", () => {
