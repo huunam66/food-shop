@@ -36,7 +36,6 @@ div{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
 }
 
 .navbar .logo img{
@@ -165,19 +164,11 @@ div{
 .ic-menu-nav{
   position: relative;
   border: none;
+  width: 5rem;
   height: 2.5rem;
   background-color: transparent;
   cursor: pointer;
   padding: 0.5rem;
-}
-
-.ic-op-nav-ini-af,
-.ic-op-nav-ini-bf,
-.ic-op-nav-icc-af,
-.ic-op-nav-icc-bf{
-  content: "";
-  position: absolute;
-  left: 0.5rem;
 }
 
 .ic-op-nav-ini-af,
@@ -190,16 +181,24 @@ div{
   top: 0;
 }
 
+.ic-op-nav-ini-dv,
+.ic-op-nav-icc-dv{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .ic-op-nav-ini-bf,
 .ic-op-nav-ini-af,
 .ic-op-nav-ini-dv,
 .ic-op-nav-icc-bf,
 .ic-op-nav-icc-af,
 .ic-op-nav-icc-dv{
-  padding-right: 5rem;
+  position: absolute;
+  width: 100%;
   padding-bottom: 0.3rem;
   background-color: #333;
   border-radius: 50%;
+  left: 0;
 }
 
 .ic-op-nav-icc-bf{
@@ -235,7 +234,7 @@ div{
 } */
 @keyframes ani-close-nav-dv{
   100%{
-    transform: translateX(600%);
+    left: 600%;
   }
 }
 @keyframes ani-close-nav-bf{
@@ -254,10 +253,10 @@ div{
 
 @keyframes ani-init-ic-nav-dv{
   0%{
-    transform: translateX(600%);
+    left: 600%;
   }
   100%{
-    transform: translateX(0);
+    left: 0;
   }
 }
 @keyframes ani-init-ic-nav-bf{

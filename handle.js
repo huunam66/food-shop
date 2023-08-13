@@ -67,6 +67,7 @@ const ar_btn_menu = () => {
       navbar.removeChild(navlist);
       body.appendChild(nav_out);
       navlist = nav_out;
+      move_in_page();
     }
 
     if (wd_bd > 900) {
@@ -86,6 +87,7 @@ const ar_btn_menu = () => {
       } catch (ex) {}
       navbar.appendChild(nav_in);
       navlist = nav_in;
+      move_in_page();
     }
   }).observe(body);
 };
@@ -99,10 +101,43 @@ window.onload = () => {
   ar_btn_menu();
 };
 
-const links = document.querySelectorAll("a");
+const e_click = () => {
+  return new MouseEvent("click", {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+  });
+};
+
+const e_links_move_click = (e, href) => {
+  e.preventDefault();
+  let ic_menu_nav = navbar.querySelector(".ic-menu-nav");
+  ic_menu_nav ? ic_menu_nav.dispatchEvent(e_click()) : null;
+  try {
+    let id_el = document.querySelector(href);
+    window.scrollTo({
+      top: id_el.offsetTop,
+      behavior: "smooth",
+    });
+  } catch (ex) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+};
+
 const move_in_page = () => {
+  const links = document.querySelectorAll("a");
   links.forEach((item) => {
-    if (item.href.includes("#")) {
+    // let ar = item.href.split("#");
+    // console.log(ar);
+    let href = item.getAttribute("href");
+    if (href.startsWith("#")) {
+      item.addEventListener("click", (ee) => {
+        e_links_move_click(ee, href);
+      });
     }
   });
 };
+move_in_page();
