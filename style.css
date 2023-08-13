@@ -26,6 +26,9 @@ header{
   padding: 1.6rem 6.4rem;
   background-color: #fdf2e9;
   position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
 }
 
