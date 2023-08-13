@@ -25,10 +25,6 @@ body{
 header{
   padding: 1.6rem 6.4rem;
   background-color: #fdf2e9;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
   overflow: hidden;
 }
 
@@ -98,7 +94,7 @@ div{
   background-color: rgba(255, 255, 255, 0.8) !important;
   backdrop-filter: blur(1.6rem);
   -webkit-backdrop-filter: blur(1.6rem);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .d-none{
