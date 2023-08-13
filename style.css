@@ -47,6 +47,7 @@ div{
 .nav-list{
   display: flex;
   list-style: none;
+  z-index: 999999;
 }
 
 .list-item{
