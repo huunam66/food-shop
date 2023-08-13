@@ -99,5 +99,10 @@ window.onload = () => {
   ar_btn_menu();
 };
 
-const links = document.querySelector("a");
-const move_in_page = () => {};
+const links = document.querySelectorAll("a");
+const move_in_page = () => {
+  links.forEach((item) => {
+    if (item.href.includes("#")) {
+    }
+  });
+};
