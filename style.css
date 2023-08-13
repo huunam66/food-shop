@@ -19,7 +19,7 @@ html{
 }
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 header{
@@ -167,7 +167,6 @@ div{
   background-color: transparent;
   cursor: pointer;
   padding: 0.5rem;
-  overflow: hidden;
 }
 
 .ic-op-nav-ini-af,
