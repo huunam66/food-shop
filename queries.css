@@ -148,10 +148,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  html{
-    font-size: 62.5%;
-  }
-
   .sect-logo .container .box-logo{
     display: grid;
     grid-auto-flow: column;
@@ -171,11 +167,6 @@
     padding-bottom: 100%;
   }
 
-  footer{
-    padding: 12.8rem 3.2rem;
-    text-align: center;
-  }
-
   .grid-f-item .t-1 .social-ic{
     justify-content: center;
   }
@@ -187,6 +178,16 @@
   .sect-pricing .cont-grid{
     gap: 3.2rem;
   }
+
+  html{
+    font-size: 62.5%;
+  }
+
+  footer{
+    padding: 12.8rem 3.2rem;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 50em){
