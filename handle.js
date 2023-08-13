@@ -98,3 +98,6 @@ window.addEventListener("resize", () => {
 window.onload = () => {
   ar_btn_menu();
 };
+
+const links = document.querySelector("a");
+const move_in_page = () => {};
