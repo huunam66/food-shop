@@ -44,6 +44,10 @@ const ar_btn_menu = () => {
     let wd_bd = e[0].boundingClientRect.width;
     let exs_btn_opnav = navbar.querySelector(".ic-menu-nav");
     if (wd_bd <= 900 && !exs_btn_opnav) {
+      let nav_out = navlist;
+      navbar.removeChild(navlist);
+      body.appendChild(nav_out);
+      navlist = nav_out;
       const btn_menu = document.createElement("button");
       btn_menu.classList.add("ic-menu-nav");
       const div1 = document.createElement("div");
@@ -63,14 +67,16 @@ const ar_btn_menu = () => {
         e_menu_nav_click(btn_menu);
       });
       body.classList.add("mb");
-      let nav_out = navlist;
-      navbar.removeChild(navlist);
-      body.appendChild(nav_out);
-      navlist = nav_out;
       move_in_page();
     }
 
     if (wd_bd > 900) {
+      let nav_in = navlist;
+      try {
+        body.removeChild(navlist);
+      } catch (ex) {}
+      navbar.appendChild(nav_in);
+      navlist = nav_in;
       navbar.classList.remove("nav-fx-op");
       try {
         navbar.removeChild(exs_btn_opnav);
@@ -81,12 +87,6 @@ const ar_btn_menu = () => {
         ? navlist.classList.remove("nav-opn")
         : null;
       body.classList.remove("mb");
-      let nav_in = navlist;
-      try {
-        body.removeChild(navlist);
-      } catch (ex) {}
-      navbar.appendChild(nav_in);
-      navlist = nav_in;
       move_in_page();
     }
   }).observe(body);
