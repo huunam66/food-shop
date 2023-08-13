@@ -25,6 +25,7 @@ body{
 header{
   padding: 1.6rem 6.4rem;
   background-color: #fdf2e9;
+  position: relative;
 }
 
 section,
@@ -47,7 +48,6 @@ div{
 .nav-list{
   display: flex;
   list-style: none;
-  z-index: 999999;
 }
 
 .list-item{
@@ -85,11 +85,11 @@ div{
 }
 
 /*=================== HEADER - VIEW OUT ===================*/
+
 .hd{
   position: sticky;
   top: 0;
   left: 0;
-  /* height: 100vh; */
   z-index: 9999999;
   background-color: rgba(255, 255, 255, 0.8) !important;
   backdrop-filter: blur(1.6rem);
@@ -107,8 +107,8 @@ div{
 
 /*=================== HEADER - NAV - MOBILE ===================*/
 
-.nav-fx-op .logo,
-.nav-fx-op .ic-menu-nav{
+header .logo,
+header .ic-menu-nav{
   z-index: 999999911;
 }
 

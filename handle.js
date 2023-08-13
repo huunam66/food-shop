@@ -111,8 +111,10 @@ const e_click = () => {
 
 const e_links_move_click = (e, href) => {
   e.preventDefault();
-  let ic_menu_nav = navbar.querySelector(".ic-menu-nav");
-  ic_menu_nav ? ic_menu_nav.dispatchEvent(e_click()) : null;
+  let nav_opn = body.querySelector(".nav-opn");
+  if (nav_opn) {
+    navbar.querySelector(".ic-menu-nav").dispatchEvent(e_click());
+  }
   try {
     let id_el = document.querySelector(href);
     window.scrollTo({
