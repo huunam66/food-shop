@@ -17,6 +17,7 @@ html{
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
+  z-index: 999999999999;
 }
 
 header{

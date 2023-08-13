@@ -40,7 +40,7 @@ const e_menu_nav_click = (btn) => {
 };
 
 const ar_btn_menu = () => {
-  const inv = new IntersectionObserver((e) => {
+  new IntersectionObserver((e) => {
     let wd_bd = e[0].boundingClientRect.width;
     let exs_btn_opnav = navbar.querySelector(".ic-menu-nav");
     if (wd_bd <= 900 && !exs_btn_opnav) {
